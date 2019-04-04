@@ -55,7 +55,7 @@
 1.  10% (Generate images with GANPaint)
 2.  20% (Dissect any GAN model and analyze what you find)
 3.  20% (Compare with other method)
-4.  30% (Assistant) 
+4.  30% (Assistant)
 5.  20% (Mutual evaluation)
 
 reference:
@@ -67,7 +67,7 @@ reference:
 [**Project**](https://gandissect.csail.mit.edu/) | [**Demo**](http://gandissect.res.ibm.com/ganpaint.html?project=churchoutdoor&layer=layer4) | [**Paper**](https://arxiv.org/pdf/1811.10597.pdf) | [**Video**](http://tiny.cc/gandissect) <br>
 [GAN Dissection](https://gandissect.csail.mit.edu/) is a way to inspect the internal representations of a generative adversarial network (GAN) to understand how internal units align with human-interpretable concepts. It is part of [NetDissect](https://netdissect.csail.mit.edu/).
 
-This repo allows you to dissect a GAN model. It provides the dissection results as a static summary or as an interactive visualization. Try our interactive [GANPaint demo](http://gandissect.res.ibm.com/ganpaint.html?project=churchoutdoor&layer=layer4) to interact with GANs and draw images. 
+This repo allows you to dissect a GAN model. It provides the dissection results as a static summary or as an interactive visualization. Try our interactive [GANPaint demo](http://gandissect.res.ibm.com/ganpaint.html?project=churchoutdoor&layer=layer4) to interact with GANs and draw images.
 
 ## Overview
 
@@ -158,3 +158,17 @@ Other URLs:
 
 ## Acknowledgments
 Code is from [gandissect](https://github.com/CSAILVision/GANDissect). All credit goes to the authors of [gandissect](https://gandissect.csail.mit.edu/), David Bau, Jun-Yan Zhu, Hendrik Strobelt, Bolei Zhou, Joshua B. Tenenbaum, William T. Freeman and Antonio Torralba.
+
+## Compare with [inpainting](https://github.com/akmtn/pytorch-siggraph2017-inpainting)
+| source | mask | inpainting | ganpaint |
+| :------: | :------: | :--------: | :-----: |
+| ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-masktree.png) | ![](assets/inpaint/1-masktree.png.out.png) | ![](assets/inpaint/1-masktree.ganpaint.out.png) |
+| ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-maskwindow.png) | ![](assets/inpaint/1-maskwindow.png.out.png) | ![](assets/inpaint/1-maskwindow.ganpaint.out.png) |
+| ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskdoor.png) | ![](assets/inpaint/2-maskdoor.png.out.png) | ![](assets/inpaint/2-maskdoor.ganpaint.out.png) |
+| ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskgrass.png) | ![](assets/inpaint/2-maskgrass.png.out.png) | ![](assets/inpaint/2-maskgrass.ganpaint.out.png) |
+| ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdome.png) | ![](assets/inpaint/4-maskdome.png.out.png) | ![](assets/inpaint/4-maskdome.ganpaint.out.png) |
+| ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdoor.png) | ![](assets/inpaint/4-maskdoor.png.out.png) | ![](assets/inpaint/4-maskdoor.ganpaint.out.png) |
+| ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-maskdoor.png) | ![](assets/inpaint/5-maskdoor.png.out.png) | ![](assets/inpaint/5-maskdoor.ganpaint.out.png) |
+| ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-masktree.png) | ![](assets/inpaint/5-masktree.png.out.png) | ![](assets/inpaint/5-masktree.ganpaint.out.png) |
+| ![](assets/GANPaint/6-ori.png) | ![](assets/inpaint/6-masktree.png) | ![](assets/inpaint/6-masktree.png.out.png) | ![](assets/inpaint/6-masktree.ganpaint.out.png) |
+| ![](assets/GANPaint/6-ori.png) | ![](assets/inpaint/6-maskwindow.png) | ![](assets/inpaint/6-maskwindow.png.out.png) | ![](assets/inpaint/6-maskwindow.ganpaint.out.png) |
