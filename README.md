@@ -1,5 +1,24 @@
 # homework3-GAN-Dissection
 
+## Generate images with GANPaint
+### Failure Cases
+- Curious about how the network would response to unreasonable draw, we draw brick/dome/door/grass at the upleft corner (sky).
+- While drawing brick/dome/grass results in strong artifacts in all the painted area, drawing door for the same area only lead to small pieces of artifacts.
+
+| Original | draw brick | draw dome | draw door | draw grass |
+| :------: | :--------: | :-------: | :-------: | :--------: |
+| ![](assets/GANPaint/2-ori.png) | ![](assets/GANPaint/2-draw-brick.png) | ![](assets/GANPaint/2-draw-dome.png) | ![](assets/GANPaint/2-draw-door.png) | ![](assets/GANPaint/2-draw-grass.png) |
+| ![](assets/GANPaint/4-ori.png) | ![](assets/GANPaint/4-draw-brick.png) | ![](assets/GANPaint/4-draw-dome.png) | ![](assets/GANPaint/4-draw-door.png) | ![](assets/GANPaint/4-draw-grass.png) |
+
+### Affect the artifacts by drawing/removeing the same class
+- The orignal image contains slight artifact in the sky, we found that drawing sky could help to remove the artifact, while removing sky would intensify the artifact.
+
+| Original | draw sky | remove sky |
+| :------: | :------: | :--------: |
+| ![](assets/GANPaint/2-ori.png) | ![](assets/GANPaint/2-draw-sky.png) | ![](assets/GANPaint/2-remove-sky.png) |
+| ![](assets/GANPaint/4-ori.png) | ![](assets/GANPaint/4-draw-sky.png) | ![](assets/GANPaint/4-remove-sky.png) |
+
+
 ## Assign
 
 1.  10% (Generate images with GANPaint)
