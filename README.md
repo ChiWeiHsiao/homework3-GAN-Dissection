@@ -26,6 +26,10 @@
 
 
 ## Dissect GAN model
+- We experiment two layers (5, 8) of two models (restaurant, churchoutdoor).
+- Due to limited GPU memory, we only use 100 samples instead of the defualt setting 1000 to count IoU.
+- The units distribution according to classes and some examples are shown in the following.
+
 #### Restaurant
 - layer 5 Unit class distribution
     - ![](assets/restaurant/restaurant-layer5.svg)
@@ -49,6 +53,13 @@
     | :------: | :------------: | :-----------: | :----------: | :----------: |
     | before   | ![](assets/outdoor/remove-foliage-1-before.jpg) | ![](assets/outdoor/remove-foliage-2-before.jpg) | ![](assets/outdoor/remove-stone-1-before.jpg) | ![](assets/outdoor/remove-stone-2-before.jpg) |
     | after    | ![](assets/outdoor/remove-foliage-1-after.jpg)  | ![](assets/outdoor/remove-foliage-2-after.jpg) | ![](assets/outdoor/remove-stone-1-after.jpg) | ![](assets/outdoor/remove-stone-2-after.jpg) |
+
+#### Discussion
+- After disectting two different models, we found that it's hard to tell which layer would contains more objects and
+  materials.
+    - Although the paper says ` many objects emerge at layers 4-7`, we found layer 8 also contains many objects, even
+      more than layer 5 for ChurchOutdoor model.
+- Without user painted area (like GANPaint), insertion of a class usually results to no difference. Thus, we only showed examples for ablation.
 
 ## Compare with [inpainting](https://github.com/akmtn/pytorch-siggraph2017-inpainting)
 Below we compare the scene ablation result of GANPaint and [Globally and Locally Consistent Image Completion](http://iizuka.cs.tsukuba.ac.jp/projects/completion/en/) using same source image and similar mask.
