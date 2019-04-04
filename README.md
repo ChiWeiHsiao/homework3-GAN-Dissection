@@ -28,15 +28,15 @@
 ## Dissect GAN model
 #### Restaurant
 - layer 5 Unit class distribution
-    - ![](assets/restaurant/restaurant-layer5.svg)
+    ![](assets/restaurant/restaurant-layer5.svg)
 - layer 8 Unit class distribution
-    - ![](assets/restaurant/restaurant-layer8.svg)
+    ![](assets/restaurant/restaurant-layer8.svg)
 - layer 5 examples
 
-| layer5   | remove window  | remove window | remove table | remove table | remove sky | remove sky |
-| :------: | :------------: | :-----------: | :----------: | :----------: | :--------: | :--------: |
-| before   | ![](assets/restaurant/remove-window-1-before.jpeg) | ![](assets/restaurant/remove-window-2-before.jpeg) | ![](assets/restaurant/remove-table-1-before.jpeg) | ![](assets/restaurant/remove-table-2-before.jpeg) | ![](assets/restaurant/remove-sky-1-before.jpeg) | ![](assets/restaurant/remove-sky-2-before.jpeg) |
-| after    | ![](assets/restaurant/remove-window-1-after.jpeg)  | ![](assets/restaurant/remove-window-2-after.jpeg) | ![](assets/restaurant/remove-table-1-after.jpeg) | ![](assets/restaurant/remove-table-2-after.jpeg) | ![](assets/restaurant/remove-sky-1-after.jpeg) | ![](assets/restaurant/remove-sky-2-after.jpeg) |
+    | layer5   | remove window  | remove window | remove table | remove table | remove sky | remove sky |
+    | :------: | :------------: | :-----------: | :----------: | :----------: | :--------: | :--------: |
+    | before   | ![](assets/restaurant/remove-window-1-before.jpeg) | ![](assets/restaurant/remove-window-2-before.jpeg) | ![](assets/restaurant/remove-table-1-before.jpeg) | ![](assets/restaurant/remove-table-2-before.jpeg) | ![](assets/restaurant/remove-sky-1-before.jpeg) | ![](assets/restaurant/remove-sky-2-before.jpeg) |
+    | after    | ![](assets/restaurant/remove-window-1-after.jpeg)  | ![](assets/restaurant/remove-window-2-after.jpeg) | ![](assets/restaurant/remove-table-1-after.jpeg) | ![](assets/restaurant/remove-table-2-after.jpeg) | ![](assets/restaurant/remove-sky-1-after.jpeg) | ![](assets/restaurant/remove-sky-2-after.jpeg) |
 
 
 ## Assign
