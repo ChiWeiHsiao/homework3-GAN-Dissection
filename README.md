@@ -1,7 +1,13 @@
 # homework3-GAN-Dissection
 
 ## Generate images with GANPaint
-### Failure Cases
+| Original |   draw   |   remove   |
+| :------: | :------: | :--------: |
+| ![](assets/GANPaint/1-ori.png) | ![](assets/GANPaint/1-draw.png) | ![](assets/GANPaint/1-remove.png) |
+| ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png) | ![](assets/GANPaint/5-remove.png) |
+| ![](assets/GANPaint/6-ori.png) | ![](assets/GANPaint/6-draw.png) | ![](assets/GANPaint/6-remove.png) |
+
+### Failure Cases caused by unreasonable draw
 - Curious about how the network would response to unreasonable draw, we draw brick/dome/door/grass at the upleft corner (sky).
 - While drawing brick/dome/grass results in strong artifacts in all the painted area, drawing door for the same area only lead to small pieces of artifacts.
 
