@@ -3,11 +3,9 @@
 ## Generate images with GANPaint
 | Original |   draw   |   remove   |
 | :------: | :------: | :--------: |
-| ![](assets/GANPaint/1-ori.png) | ![](assets/GANPaint/1-draw.png) (draw grass) | ![](assets/GANPaint/1-remove.png)
-(remove tree)|
-| ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png) (draw brick)| ![](assets/GANPaint/5-remove.png)
-(remove frass)|
-| ![](assets/GANPaint/6-ori.png) | ![](assets/GANPaint/6-draw.png) (draw tree)| ![](assets/GANPaint/6-remove.png) (remove brick)|
+| ![](assets/GANPaint/1-ori.png) | ![](assets/GANPaint/1-draw.png)(draw grass)| ![](assets/GANPaint/1-remove.png)(remove tree)|
+| ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png)(draw brick)| ![](assets/GANPaint/5-remove.png)(remove frass)|
+| ![](assets/GANPaint/6-ori.png) | ![](assets/GANPaint/6-draw.png)(draw tree)| ![](assets/GANPaint/6-remove.png)(remove brick)|
 
 ### Failure Cases caused by unreasonable draw
 - Curious about how the network would response to unreasonable draw, we draw brick/dome/door/grass at the upleft corner (sky).
