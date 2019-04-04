@@ -149,15 +149,19 @@ Other URLs:
 Code is from [gandissect](https://github.com/CSAILVision/GANDissect). All credit goes to the authors of [gandissect](https://gandissect.csail.mit.edu/), David Bau, Jun-Yan Zhu, Hendrik Strobelt, Bolei Zhou, Joshua B. Tenenbaum, William T. Freeman and Antonio Torralba.
 
 ## Compare with [inpainting](https://github.com/akmtn/pytorch-siggraph2017-inpainting)
-| source | mask | inpainting | ganpaint |
-| :------: | :------: | :--------: | :-----: |
-| ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-masktree.png) | ![](assets/inpaint/1-masktree.png.out.png) | ![](assets/inpaint/1-masktree.ganpaint.out.png) |
-| ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-maskwindow.png) | ![](assets/inpaint/1-maskwindow.png.out.png) | ![](assets/inpaint/1-maskwindow.ganpaint.out.png) |
-| ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskdoor.png) | ![](assets/inpaint/2-maskdoor.png.out.png) | ![](assets/inpaint/2-maskdoor.ganpaint.out.png) |
-| ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskgrass.png) | ![](assets/inpaint/2-maskgrass.png.out.png) | ![](assets/inpaint/2-maskgrass.ganpaint.out.png) |
-| ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdome.png) | ![](assets/inpaint/4-maskdome.png.out.png) | ![](assets/inpaint/4-maskdome.ganpaint.out.png) |
-| ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdoor.png) | ![](assets/inpaint/4-maskdoor.png.out.png) | ![](assets/inpaint/4-maskdoor.ganpaint.out.png) |
-| ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-maskdoor.png) | ![](assets/inpaint/5-maskdoor.png.out.png) | ![](assets/inpaint/5-maskdoor.ganpaint.out.png) |
-| ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-masktree.png) | ![](assets/inpaint/5-masktree.png.out.png) | ![](assets/inpaint/5-masktree.ganpaint.out.png) |
-| ![](assets/GANPaint/6-ori.png) | ![](assets/inpaint/6-masktree.png) | ![](assets/inpaint/6-masktree.png.out.png) | ![](assets/inpaint/6-masktree.ganpaint.out.png) |
-| ![](assets/GANPaint/6-ori.png) | ![](assets/inpaint/6-maskwindow.png) | ![](assets/inpaint/6-maskwindow.png.out.png) | ![](assets/inpaint/6-maskwindow.ganpaint.out.png) |
+Below we compare the scene ablation result of GANPaint and [Globally and Locally Consistent Image Completion](http://iizuka.cs.tsukuba.ac.jp/projects/completion/en/) using same source image and similar mask.
+
+| id  | source | mask | inpainting | ganpaint |
+| :-: | :------: | :------: | :--------: | :-----: |
+| (a) | ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-masktree.png) | ![](assets/inpaint/1-masktree.png.out.png) (unreasonable scene) | ![](assets/inpaint/1-masktree.ganpaint.out.png) (slightly better) |
+| (b) | ![](assets/GANPaint/1-ori.png) | ![](assets/inpaint/1-maskwindow.png) | ![](assets/inpaint/1-maskwindow.png.out.png) (blurry result) | ![](assets/inpaint/1-maskwindow.ganpaint.out.png) (doesn't remove window) |
+| (c) | ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskdoor.png) | ![](assets/inpaint/2-maskdoor.png.out.png) (blurry result) | ![](assets/inpaint/2-maskdoor.ganpaint.out.png) (acceptable) |
+| (d) | ![](assets/GANPaint/2-ori.png) | ![](assets/inpaint/2-maskgrass.png) | ![](assets/inpaint/2-maskgrass.png.out.png) (unreasonable scene) | ![](assets/inpaint/2-maskgrass.ganpaint.out.png) (from grass to rock) |
+| (e) | ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdome.png) | ![](assets/inpaint/4-maskdome.png.out.png) (try to add wooden roof?) | ![](assets/inpaint/4-maskdome.ganpaint.out.png) (acceptable) |
+| (f) | ![](assets/GANPaint/4-ori.png) | ![](assets/inpaint/4-maskdoor.png) | ![](assets/inpaint/4-maskdoor.png.out.png) (blurry result) | ![](assets/inpaint/4-maskdoor.ganpaint.out.png) (doesn't remove anything) |
+| (g) | ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-maskdoor.png) | ![](assets/inpaint/5-maskdoor.png.out.png) (acceptable) | ![](assets/inpaint/5-maskdoor.ganpaint.out.png) (doesn't remove anything) |
+| (h) | ![](assets/GANPaint/5-ori.png) | ![](assets/inpaint/5-masktree.png) | ![](assets/inpaint/5-masktree.png.out.png) (doesn't remove anything) | ![](assets/inpaint/5-masktree.ganpaint.out.png) (inference the structure behind tree!!) |
+
+From the above results, we observe that the inpainting method often failed in case of removing large part of scene (e.g. tree, grass) resulting in a totaly unreasonable scene. On the other hands, ganpaint can yield better result in such scenario. In sample (d), ganpaint succefully convert the grass to rock and the overall scene look reasonable. In sample (h), to our surprise, ganpaint even infer the building structure behind the tree.
+
+In case of smaller object (e.g. door, window), the inpainting method can often remove the object but with blurry result ((b), (c), (f), (g)). Ganpaint, in this case, often remain the original things which could be dut to the high probability that a door or window on that position.
