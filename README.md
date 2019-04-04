@@ -4,7 +4,7 @@
 | Original |   draw   |   remove   |
 | :------: | :------: | :--------: |
 | ![](assets/GANPaint/1-ori.png) | ![](assets/GANPaint/1-draw.png)(draw grass)| ![](assets/GANPaint/1-remove.png)(remove tree)|
-| ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png)(draw brick)| ![](assets/GANPaint/5-remove.png)(remove frass)|
+| ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png)(draw brick)| ![](assets/GANPaint/5-remove.png)(remove grass)|
 | ![](assets/GANPaint/6-ori.png) | ![](assets/GANPaint/6-draw.png)(draw tree)| ![](assets/GANPaint/6-remove.png)(remove brick)|
 
 ### Failure Cases caused by unreasonable draw
