@@ -7,7 +7,7 @@
 | ![](assets/GANPaint/5-ori.png) | ![](assets/GANPaint/5-draw.png)(draw brick)| ![](assets/GANPaint/5-remove.png)(remove grass)|
 | ![](assets/GANPaint/6-ori.png) | ![](assets/GANPaint/6-draw.png)(draw tree)| ![](assets/GANPaint/6-remove.png)(remove brick)|
 
-### Failure Cases caused by unreasonable draw
+#### Failure Cases caused by unreasonable draw
 - Curious about how the network would response to unreasonable draw, we draw brick/dome/door/grass at the upleft corner (sky).
 - While drawing brick/dome/grass results in strong artifacts in all the painted area, drawing door for the same area only lead to small pieces of artifacts.
 
@@ -16,7 +16,7 @@
 | ![](assets/GANPaint/2-ori.png) | ![](assets/GANPaint/2-draw-brick.png) | ![](assets/GANPaint/2-draw-dome.png) | ![](assets/GANPaint/2-draw-door.png) | ![](assets/GANPaint/2-draw-grass.png) |
 | ![](assets/GANPaint/4-ori.png) | ![](assets/GANPaint/4-draw-brick.png) | ![](assets/GANPaint/4-draw-dome.png) | ![](assets/GANPaint/4-draw-door.png) | ![](assets/GANPaint/4-draw-grass.png) |
 
-### Affect the artifacts by drawing/removeing the same class
+#### Affect the artifacts by drawing/removeing the same class
 - The orignal image contains slight artifact in the sky, we found that drawing sky could help to remove the artifact, while removing sky would intensify the artifact.
 
 | Original | draw sky | remove sky |
@@ -24,6 +24,17 @@
 | ![](assets/GANPaint/2-ori.png) | ![](assets/GANPaint/2-draw-sky.png) | ![](assets/GANPaint/2-remove-sky.png) |
 | ![](assets/GANPaint/4-ori.png) | ![](assets/GANPaint/4-draw-sky.png) | ![](assets/GANPaint/4-remove-sky.png) |
 
+
+## Dissect GAN model
+#### Restaurant
+- layer 5
+    - ![Unit class distribution](assets/restaurant/restaurant-layer5.svg)
+    - |  | remove window  | remove window |
+        | :------: | :------: | :--------: |
+        | before | ![](assets/restaurant/remove-window-1-before.jpeg) | ![](assets/restaurant/remove-window-2-before.jpeg) |
+        | after  | ![](assets/restaurant/remove-window-1-after.jpeg)  | ![](assets/restaurant/remove-window-2-after.jpeg) |
+- layer 8
+    - ![Unit class distribution](assets/restaurant/restaurant-layer8.svg)
 
 ## Assign
 
